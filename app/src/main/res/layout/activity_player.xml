@@ -83,7 +83,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_stop_bg" />
+                android:background="@drawable/player_button_image_help_stop" />
 
             <ImageButton
                 android:id="@+id/btn_change"

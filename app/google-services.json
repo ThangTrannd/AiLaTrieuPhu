@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "421053786686",
+    "project_id": "hoixoaydapxoay-9856e",
+    "storage_bucket": "hoixoaydapxoay-9856e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421053786686:android:d84cfff2a68194cac87f6f",
+        "android_client_info": {
+          "package_name": "vgame.QAgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421053786686-qvp2k1bsi07ps58om855u8ntc6f63fsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB22BwK15YrwbQFQuhP41UVWV2bzeDy7cI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "421053786686-qvp2k1bsi07ps58om855u8ntc6f63fsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

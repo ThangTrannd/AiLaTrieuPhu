@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AiLaTrieuPhu.iml" filepath="$PROJECT_DIR$/.idea/modules/AiLaTrieuPhu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AiLaTrieuPhu.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HoiXoayDapXoay.iml" filepath="$PROJECT_DIR$/.idea/modules/HoiXoayDapXoay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HoiXoayDapXoay.app.unitTest.iml" />
     </modules>
   </component>
 </project>

@@ -18,7 +18,7 @@
         android:textStyle="bold"
         android:textColor="#ecec09"
         android:layout_height="wrap_content"
-        android:text="High score"/>
+        android:text="Bảng xếp hạng"/>
 
     <ListView
         android:padding="16dp"

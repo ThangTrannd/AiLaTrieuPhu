@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#249182"
+    android:background="#62AEF9"
     android:padding="16dp">
     <TableRow android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,10 +11,10 @@
         <TextView
             android:textStyle="bold"
             android:textSize="18sp"
-            android:textColor="#cec406"
+            android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your score: "/>
+            android:text="Điểm của bạn : "/>
         <TextView android:id="@+id/tv_score"
             android:paddingLeft="32dp"
             android:textSize="18sp"
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="32dp"
-        android:hint="Your name"/>
+        android:hint="Tên bạn là :"/>
     <Button
         android:id="@+id/btn_ok"
         android:text="Đồng ý"

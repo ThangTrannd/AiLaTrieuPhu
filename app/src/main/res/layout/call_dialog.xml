@@ -59,7 +59,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bác sĩ"
+                android:text="John Cena"
                 android:textColor="#ffffff" />
         </LinearLayout>
 
@@ -80,7 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Giáo sư"
+                android:text="Khứa áo xanh"
                 android:textColor="#ffffff" />
         </LinearLayout>
 
@@ -101,7 +101,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kĩ sư"
+                android:text="Duy nến"
                 android:textColor="#ffffff" />
         </LinearLayout>
 
@@ -123,7 +123,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phóng viên"
+                android:text="Giáo sư"
                 android:textColor="#ffffff" />
         </LinearLayout>
 
@@ -131,7 +131,7 @@
     <TextView
         android:layout_width="172dp"
         android:layout_height="50dp"
-        android:text="Ý kiến chuyên gia"
+        android:text="Trợ giúp chuyên gia"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="#000000"

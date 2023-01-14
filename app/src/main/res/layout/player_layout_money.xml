@@ -15,7 +15,7 @@
         android:layout_alignParentRight="true"
         android:background="@drawable/btn_hide_bg"
         android:textAllCaps="false"
-        android:text="Hide"
+        android:text="Ẩn"
         android:textColor="#848484" />
 
     <LinearLayout

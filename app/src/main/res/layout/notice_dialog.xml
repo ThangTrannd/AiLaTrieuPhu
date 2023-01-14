@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#212121">
+    android:background="#4CAF50">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -12,7 +12,7 @@
             android:textStyle="bold"
             android:textAllCaps="true"
             android:paddingLeft="28dp"
-            android:background="#9C27B0"/>
+            android:background="#F44336"/>
         <TextView
             android:id="@+id/tv_notice"
             android:layout_width="match_parent"
