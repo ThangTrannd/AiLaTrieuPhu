@@ -2,6 +2,7 @@ package vgame.QAgame.activity;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import vgame.QAgame.App;
 import vgame.QAgame.R;
@@ -14,7 +15,7 @@ public class HighScoreActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high_score);
-
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         DatabaseManager databaseManager = new DatabaseManager(App.getContext());
         getListView().setAdapter(new HighScoreAdapter(databaseManager.getHighScore()));
     }

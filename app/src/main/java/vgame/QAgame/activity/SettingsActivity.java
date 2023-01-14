@@ -3,8 +3,9 @@ package vgame.QAgame.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ToggleButton;
 
 import vgame.QAgame.App;
@@ -21,7 +22,7 @@ public class SettingsActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         togMusic = ((ToggleButton)findViewById(R.id.tog_music));
         togSound = ((ToggleButton)findViewById(R.id.tog_sound));
         setBgTogMusic(App.getMusicPlayer().getStateMusic());
