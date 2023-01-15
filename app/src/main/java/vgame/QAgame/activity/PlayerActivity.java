@@ -17,6 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -55,6 +61,7 @@ public class PlayerActivity extends Activity implements View.OnClickListener {
     private boolean isReady;
     private int timer;
     private int level;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +76,12 @@ public class PlayerActivity extends Activity implements View.OnClickListener {
         findViewByIds();
         setEvents();
         loadRules();
+
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        adsListener();
     }
 
     public PlayerActivity() {
@@ -651,6 +664,9 @@ public class PlayerActivity extends Activity implements View.OnClickListener {
     protected void onPause() {
         App.getMusicPlayer().pauseBgMusic();
         App.getMusicPlayer().pauseSound();
+        if (mAdView != null) {
+            mAdView.pause();
+        }
         super.onPause();
     }
 
@@ -658,7 +674,18 @@ public class PlayerActivity extends Activity implements View.OnClickListener {
     protected void onResume() {
         super.onResume();
         if (isPlaying) App.getMusicPlayer().resumeBgMusic();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
         App.getMusicPlayer().resumeSound();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
     }
 
     @Override
@@ -669,5 +696,42 @@ public class PlayerActivity extends Activity implements View.OnClickListener {
         } else {
             super.onBackPressed();
         }
+    }
+
+    private void adsListener(){
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdImpression() {
+                // Code to be executed when an impression is recorded
+                // for an ad.
+            }
+
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+        });
     }
 }

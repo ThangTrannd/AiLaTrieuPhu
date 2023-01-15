@@ -2,15 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="vgame.QAgame"
     android:installLocation="preferExternal">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="vgame.QAgame.App"
         android:allowBackup="true"
-        android:icon="@drawable/icon_logo_app"
+        android:icon="@drawable/logo_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- Sample AdMob app ID:  -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
         <activity
+            android:hardwareAccelerated="true"
             android:name="vgame.QAgame.activity.MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">
@@ -21,9 +27,11 @@
             </intent-filter>
         </activity>
         <activity
+            android:hardwareAccelerated="true"
             android:name="vgame.QAgame.activity.SettingsActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:hardwareAccelerated="true"
             android:name="vgame.QAgame.activity.PlayerActivity"
             android:screenOrientation="portrait">
 
@@ -35,7 +43,8 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name="vgame.QAgame.activity.HighScoreActivity"></activity>
+        <activity android:name="vgame.QAgame.activity.HighScoreActivity"
+            android:hardwareAccelerated="true"></activity>
     </application>
 
 </manifest>

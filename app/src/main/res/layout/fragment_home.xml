@@ -1,59 +1,80 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/home_background"
-    android:orientation="vertical"
     tools:context="vgame.QAgame.fragments.HomeFragment">
 
-    <FrameLayout
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="6">
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:adUnitId="@string/ad_Unit_Id">
+    </com.google.android.gms.ads.AdView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="6">
 
-        <View
-            android:id="@+id/bg_circle_anim"
+            <View
+                android:id="@+id/bg_circle_anim"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_circle_anim" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="72dp"
+                android:src="@drawable/logo_app2" />
+        </FrameLayout>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_circle_anim" />
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:gravity="center">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="72dp"
-            android:src="@drawable/icon_logo_app2" />
-    </FrameLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#2dff8133" />
 
+            <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="4"
+                android:background="@drawable/button_play" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#2dff8133" />
+        </TableRow>
+
+
+    </LinearLayout>
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="#2dff8133" />
-
-        <ImageButton
-            android:id="@+id/btn_play"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:background="@drawable/button_play" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="#2dff8133" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
+        app:layout_constraintTop_toTopOf="parent"
         android:gravity="end|bottom">
 
         <ImageButton
@@ -78,4 +99,4 @@
             android:background="@drawable/home_button_setting" />
     </TableRow>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

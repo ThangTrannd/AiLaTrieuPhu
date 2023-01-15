@@ -12,6 +12,11 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+
 import vgame.QAgame.App;
 import vgame.QAgame.R;
 import vgame.QAgame.activity.HighScoreActivity;
@@ -23,6 +28,7 @@ import vgame.QAgame.dialogs.AboutDialog;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment implements View.OnClickListener {
+    private AdView mAdView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +44,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.btn_high_score).setOnClickListener(this);
         view.findViewById(R.id.btn_about).setOnClickListener(this);
 
+
+        mAdView = view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        adsListener();
         return view;
 
     }
@@ -56,12 +67,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onResume() {
         super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
         App.getMusicPlayer().resumeBgMusic();
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        if (mAdView != null) {
+            mAdView.pause();
+        }
         App.getMusicPlayer().pauseBgMusic();
     }
 
@@ -87,5 +104,43 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             default:
                 break;
         }
+    }
+
+    private void adsListener(){
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdImpression() {
+                // Code to be executed when an impression is recorded
+                // for an ad.
+            }
+
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+        });
     }
 }

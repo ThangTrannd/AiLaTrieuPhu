@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_high_score"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/player_money_background"
     tools:context="vgame.QAgame.activity.HighScoreActivity">
 
-    <TextView
-        android:paddingTop="72dp"
-        android:paddingBottom="16dp"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#ecec09"
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bảng xếp hạng"/>
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:adUnitId="@string/ad_Unit_Id">
+    </com.google.android.gms.ads.AdView>
 
-    <ListView
-        android:padding="16dp"
-        android:id="@android:id/list"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></ListView>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:paddingTop="72dp"
+            android:paddingBottom="16dp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#ecec09"
+            android:layout_height="wrap_content"
+            android:text="Bảng xếp hạng"/>
+
+        <ListView
+            android:padding="16dp"
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></ListView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
